@@ -1,0 +1,289 @@
+/* ESTILO GERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    /* Configuração do fundo de estrelas */
+    background-color: #000000;
+    background-image:
+    url('https://www.transparenttextures.com/patterns/stardust.png'), /* Estrelas menores */
+    url('https://www.transparenttextures.com/patterns/stardust.png'); /* Estrelas maiores, repetição para efeito de profundidade */
+    background-size: 200px 200px, 400px 400px; /* Tamanho das estrelas */
+    background-position: 0 0, 0 0; /* Posição inicial */
+    animation: moveStars 50s linear infinite; /* Animação das estrelas */
+}
+
+/* Animação para as estrelas se moverem */
+@keyframes moveStars {
+    from {
+        background-position: 0 0, 0 0;
+    }
+    to {
+        background-position: 10000px 5000px, 5000px 2500px; /* Valores grandes para simular movimento contínuo */
+    }
+}
+
+.logo {
+    width: 200px; /* Define a largura do contêiner */
+    height: 200px; /* Define a altura do contêiner */
+}
+
+.logo img {
+    width: 100%; /* A imagem ocupará toda a largura do contêiner */
+    height: 100%; /* A imagem ocupará toda a altura do contêiner */
+    object-fit: contain; /* A imagem manterá sua proporção e será redimensionada para caber no contêiner */
+}
+
+.interface {
+    max-width: 1280px;
+    margin: 0 auto;
+}
+
+.flex {
+    display: flex;
+}
+
+.Lcs-Contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: #00ff0d;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: .2s;
+    color: #000000;
+    border: 2px solid #00ff00;
+}
+
+h2.titulo   {
+    color: #ffffff;
+    font-size: 40px;
+    text-align: center;
+}
+
+h2.titulo span {
+    color: #00ff08;
+}
+
+/* ESTILO DE CABEÇALHO */
+header {
+    padding: 40px 4%;
+}
+
+header .interface {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none;
+    display: inline-block;
+    
+}
+
+header a:hover {
+    color: #ffffff;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+    
+}
+
+header nav ul {
+    list-style-type: none;
+}
+
+header nav ul li {
+    display: inline-block;
+    padding: 0 40px;
+}
+
+.Lcs-Contato button:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+/* ESTILO DO TOPO DO SITE */
+section.topo-site {
+    padding: 40px 4%;
+}
+
+section.topo-site .flex {
+    align-content: center; 
+    justify-content: center; 
+}
+
+.topo-do-site h1{
+    color: #ffffff;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site h1 span {
+    color: #00FF08;
+}
+
+.topo-do-site .txt-topo-site p{
+    color: #ffffff;
+    margin: 40px 0;
+    
+}
+
+.img-topo-site img {
+    
+    height: 230px; /* Ajusta a altura da imagem */
+    max-width: 600px; /* Limita a largura máxima da imagem */
+    border-radius: 20px; /* Borda arredondada opcional */
+}
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+}
+
+
+@keyframes flutuar{
+    0% {
+       top: 0;
+    }
+    100% {
+         top: 30px;
+    }
+
+}
+
+/* ESTILO DAS ESPECIALIDADES */
+section.especialidades {
+    padding: 40px 4%;
+}
+
+section.especialidades .flex{
+    gap: 60px;
+}
+
+.especialidades .especialidades-box{
+    color: #979797;
+    padding: 40px;
+    margin-top: 44px;
+    border-radius: 20px;
+    transition: .2s;
+}
+
+.especialidades .especialidades-box:hover {
+    box-shadow: 0px 0px 15px #1eff00;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+}
+
+.especialidades .especialidades-box i{
+    font-size: 70px;
+    color: #00ff08;
+}
+.especialidades .especialidades-box h3{
+    color: #ffffff;
+    font-size: 28px;
+    margin: 15px 0;
+}
+
+--------------------------------------
+section.sobre{
+    padding: 40px 4%;
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+ .sobre .txt-sobre{
+    color: #ffffff;
+ }
+
+ .sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px;
+ }
+ .sobre .txt-sobre h2 span{
+    color: #00FF08;
+    display: block;
+ }
+
+ .sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify;
+ }
+
+ .sobre .txt-sobre .Lcs-Social button{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 0;
+    background-color: #00ff0d;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: .2s;
+ }
+ .Lcs-Social button:hover {
+    box-shadow: 0px 0px 8px #00ff08;
+    transform: scale(1.05); /* Efeito de zoom ao passar o mouse */
+ }
+
+
+
+/* Estilos para a seção "Sobre" ( MInha FOTO de perfil) */
+.sobre {
+    padding: 80px 4%; /* Espaçamento interno superior/inferior e laterais */
+}
+
+/* Centraliza o conteúdo da interface */
+.sobre .interface {
+    max-width: 1200px; /* Largura máxima para o conteúdo */
+    margin: 0 auto;    /* Centraliza a interface na página */
+}
+
+/* Estilos para o contêiner da imagem */
+.imag-sobre {
+    display: flex; /* Usa flexbox para centralizar a imagem */
+    justify-content: center; /* Centraliza horizontalmente */
+    align-items: center;     /* Centraliza verticalmente (se houver altura definida) */
+    /* Você pode adicionar uma altura mínima se quiser que o contêiner tenha um espaço garantido */
+    /* min-height: 400px; */
+}
+
+/* Estilos para a imagem do programador */
+.imag-sobre img {
+    max-width: 100%; /* Garante que a imagem não ultrapasse a largura do contêiner */
+    height: auto;    /* Mantém a proporção da imagem */
+    border-radius: 15px; /* Bordas levemente arredondadas */
+    box-shadow: 0 20px 20px rgb(0, 0, 0); /* Sombra suave para profundidade */
+    transition: transform 0.3s ease; /* Animação suave ao passar o mouse */
+    object-fit: cover; /* Garante que a imagem preencha o espaço sem distorcer, caso tenha dimensões fixas */
+    margin-right: 40px; /* Espaçamento à direita, se houver texto ao lado */
+    width: 350px; /* Largura fixa para a imagem */
+    height: 350px; /* Altura fixa, pode ser ajustado para ser proporcional */
+    /* Se a imagem for quadrada, width e height iguais funcionam bem.
+       Se for retangular, ajuste o height ou remova-o para que 'height: auto' mantenha a proporção. */
+}
+
+/* Efeito ao passar o mouse sobre a imagem */
+.imag-sobre img:hover {
+    transform: scale(1.03); /* Aumenta ligeiramente a imagem */
+    box-shadow: 0 5px 30px rgb(60, 255, 0); /* Aumenta a intensidade da sombra */
+}
+
+/* Estilos para a disposição flexível dentro da seção */
+.sobre .flex {
+    display: flex;
+    justify-content: space-between; /* Distribui os itens (imagem e texto) */
+    align-items: center; /* Alinha verticalmente os itens */
+    gap: 40px; /* Espaçamento entre a imagem e o texto (se houver) */
+    flex-wrap: wrap; /* Permite que os itens quebrem linha em telas menores */
+    margin-right: 40px; /* Espaçamento à direita, se necessário */
+}
+
